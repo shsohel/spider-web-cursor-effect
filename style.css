@@ -1,0 +1,142 @@
+:root {
+    --white: #eee;
+    /* Light Grey */
+    --light: #56CAEF;
+    /* Light Blue */
+    --blue: #071032;
+    /* Dark Blue */
+    --light-blue: #160732;
+    /* Very Dark Blue */
+    --sky: #89a5df;
+    /* Sky Blue */
+    --pink: #e46e7f;
+    /* Pink */
+    --lavender: #c691e6;
+    /* Lavender */
+    --dark-purple: #040018;
+    /* Very Dark Purple */
+    --translucent-grey: #afaeae55;
+    /* Translucent Light Grey */
+    --semi-transparent-white: #eee1;
+    /* Semi-Transparent White */
+    --light-yellow: #e8e191;
+    /* Light Yellow */
+}
+
+body {
+    color: var(--light);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-image:
+        repeating-linear-gradient(to right, var(--blue) 0 1px, transparent 2px 200px),
+        repeating-linear-gradient(to bottom, var(--light-blue) 0 1px, transparent 2px 200px),
+        radial-gradient(at 50% 50%, var(--blue), var(--light-blue));
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+header img {
+    width: 30px;
+}
+
+header {
+    position: relative;
+    z-index: 20;
+    width: min(1200px, 90vw);
+    margin: auto;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+main {
+    /* Content-specific styles can be added here */
+}
+
+main .banner {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    margin-top: -70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+}
+
+.banner button {
+    all: unset;
+    border: 1px solid var(--translucent-grey);
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to bottom, var(--semi-transparent-white), transparent, var(--semi-transparent-white));
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.banner button:hover {
+    background-color: var(--lavender);
+    color: var(--dark-purple);
+    box-shadow: 0 0 50px var(--lavender);
+}
+
+h1 {
+    --to: left;
+    font-size: 4em;
+    font-weight: bold;
+    background-image: linear-gradient(to var(--to), var(--sky), var(--pink), var(--light-yellow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    line-height: 1em;
+}
+
+h1.right {
+    --to: right;
+}
+
+.banner {
+    position: relative;
+}
+
+.banner #dotsCanvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
